@@ -1,0 +1,77 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styling */
+body {
+    font-family: 'Orbitron', sans-serif; /* Cyberpunk font */
+    background: linear-gradient(135deg, #00b09b, #96c93d); /* Cyberpunk-style gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+
+/* Main container styling */
+.container {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
+    border-radius: 15px;
+    text-align: center;
+    padding: 40px 60px;
+    box-shadow: 0 0 20px #00ff00, 0 0 50px #00ff00; /* Green neon glow */
+    animation: bootUpAnimation 1.5s ease-out forwards; /* Boot-up animation */
+}
+
+/* Header styling with glowing effect */
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #00ff00; /* Neon green text */
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00; /* Glowing effect */
+    animation: headerGlow 1.5s ease-in-out infinite alternate; /* Header glow animation */
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #f0f0f0;
+    opacity: 0.9;
+}
+
+/* Glowing effect for the header text */
+@keyframes headerGlow {
+    0% {
+        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+    }
+    50% {
+        text-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00, 0 0 40px #00ff00;
+    }
+    100% {
+        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+    }
+}
+
+/* Keyframe for boot-up animation */
+@keyframes bootUpAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(50px); /* Start smaller and lower */
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1) translateY(-10px); /* Bounce up slightly */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0); /* Final position */
+    }
+}
